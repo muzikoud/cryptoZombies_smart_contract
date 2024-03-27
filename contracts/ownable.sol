@@ -12,13 +12,13 @@ contract Ownable {
         require(msg.sender == owner);
         _;
     }
-    function Ownable() public {
+    function ownable() public {
         owner = msg.sender;
     }
 
     function transferOwnership(address newOwner) public onlyOwner {
         require(newOwner != address(0));
-        OwnershipTransferred(owner, newOwner);
+        emit OwnershipTransferred(owner, newOwner);
         owner = newOwner;
     }
 }
