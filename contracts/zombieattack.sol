@@ -9,7 +9,7 @@ contract ZombieAttack is ZombieHelper {
 
   function randMod(uint _modulus) internal returns(uint) {
     randNonce++;
-    return uint(keccak256(now, msg.sender, randNonce)) % _modulus;
+    return uint(keccak256(abi.encodePacked(block.timestamp, msg.sender, randNonce))) % _modulus;
   }
 
   function attack(uint _zombieId, uint _targetId) external onlyOwnerOf(_zombieId) {
