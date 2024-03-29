@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0;
 
-import "./zombiefeeding.sol";
+import "./zombieFeeding.sol";
 
 contract ZombieHelper is ZombieFeeding {
     uint levelUpFee = 0.001 ether;

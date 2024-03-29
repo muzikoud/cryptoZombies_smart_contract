@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0;
 
-import "./zombiehelper.sol";
+import "./zombieHelper.sol";
 import "./safeMath.sol";
 
 contract ZombieAttack is ZombieHelper {
